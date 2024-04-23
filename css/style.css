@@ -1,0 +1,110 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ecran{
+    width: 100%;
+    height: 100vh;
+    background-image: url('/image/espace.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.carte{
+    width: 90%;
+    max-width: 440px;
+    color: aliceblue;
+    text-align: center;
+    padding: 50px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.carte img{
+    width: 150px;
+    border-radius: 50%;
+    background-color: black;
+
+}
+
+.carte .reseau img {
+    width: 40px;
+    border-radius: 50%;
+    margin: 10px 5px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.carte .reseau img:hover{
+    background: rgb(46, 130, 226);
+    transform: scale(1.2);
+}
+
+.bouton{
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    background: #fff;
+    color: rgb(46, 130, 226);
+    padding: 10px 30px;
+    border-radius: 30px;
+    margin: 30px 0 10px;
+}
+
+
+
+
+
+
+.container {
+    background-size: cover;
+    color: #f0f0f0;
+    background-position: center;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; (Supprimez cette ligne) */
+    /* align-items: center; (Supprimez cette ligne) */
+    flex-wrap: wrap; /* Ajoutez cette ligne pour gérer le saut de ligne des logos */
+  }
+  
+  li {
+    margin: 10px; /* Retirez le margin-right pour espacer les logos horizontalement */
+    text-align: center;
+  }
+  
+  img {
+    max-width: 100px;
+    height: auto;
+    cursor: pointer;
+  }
+  
+  p {
+    margin-top: 5px;
+  }
