@@ -1,37 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-    <link rel='stylesheet' href='./css/main.css'>
-    <link rel="shortcut icon" type="image/png" href="/image/favicon.png"/>
-    
+    <link rel="shortcut icon" type="image/png" href="/image/favicon.png" />
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-    <header class="header">
-        <a href="index.html" class="logo">Portfolio</a>
-
-        <nav class="navbar">
-            <a href="/url/cv_ilyes.pdf" target="_blank">Curriculum vitæ</a>
-            <a href="/comp.html">Compétence</a>
-            <a href="/projets.html">Projets</a>
-            <a href="certification.html">Certification</a>
-            <a href="/url/E4.pdf.pdf">Epreuve E4</a>
-
-        </nav>
+<body class="bg-cover bg-center bg-fixed" style="background-image: url('/image/wallpaper.jpg');">
+    <header class="header bg-black-800 text-white py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <a href="index.html" class="logo text-2xl font-bold">Portfolio</a>
+            <nav class="navbar">
+                <a href="/url/cv_ilyes.pdf" target="_blank"
+                    class="text-white font-medium hover:text-gray-300 mr-4">Curriculum vitæ</a>
+                <a href="/comp.html" class="text-white font-medium hover:text-gray-300 mr-4">Compétence</a>
+                <a href="/projets.html" class="text-white font-medium hover:text-gray-300 mr-4">Projets</a>
+                <a href="certification.html" class="text-white font-medium hover:text-gray-300 mr-4">Certification</a>
+                <a href="/url/E4.pdf" class="text-white font-medium hover:text-gray-300">Epreuve E4</a>
+            </nav>
+        </div>
     </header>
-    <body>
+
+    <div class="container mx-auto py-8 text-center">
+        <p class="text-white text-lg sm:text-xl">Bienvenue</p>
+        <h1 class="text-4xl sm:text-5xl font-bold text-white">Sur mon Portfolio</h1>
+        <p class="text-lg sm:text-xl text-white">Etudiant en informatique basée sur le Développement et la Cybersécurité</p>
     </div>
-    <div class="pic-text">
-        <p class="section-text-p1">Bienvenue, je suis</p>
-        <h1 class="title">Taoufik Ilyes</h1> 
-        <span style="font-size: 25px;"> Etudiant en informatique basée sur le Développement et la Cybersécurité
-        </span>
+
+    <div class="container mx-auto py-8 flex flex-wrap justify-center">
+        <!-- Box BTS SIO -->
+        <div class="bg-white shadow-lg rounded-lg p-8 lg:w-1/4 mr-8 mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">BTS SIO</h2>
+            <div class="flex items-center mb-4">
+                <!-- Bouton switch pour choisir entre SLAM et SISR -->
+                <input type="checkbox" id="switch" class="hidden">
+                <label for="switch" class="relative flex items-center cursor-pointer mr-4">
+                    <span class="block w-10 h-6 bg-gray-400 rounded-full"></span>
+                    <span id="slider" class="absolute top-0 left-0 w-6 h-6 bg-green-500 rounded-full shadow-md transition transform translate-x-0"></span>
+                </label>
+                <span id="switch-text" class="text-lg font-bold text-gray-700">SLAM</span>
+            </div>
+            <!-- Contenu à afficher en fonction de l'option choisie -->
+            <div id="content">
+                <p class="text-lg text-gray-700">Le SLAM (Solutions Logicielles et Applications Métiers) est l'une des options du BTS SIO. Cette spécialisation forme des professionnels capables de concevoir, développer et maintenir des logiciels et des applications métiers répondant aux besoins des organisations.</p>
+            </div>
+        </div>
+    
+        <!-- Box Présentation -->
+        <div class="bg-white shadow-lg rounded-lg p-8 lg:w-1/4 mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Présentation</h2>
+            <p class="text-lg text-gray-700">Je suis Taoufik Ilyes, j'ai 21 ans je suis étudiant en deuxieme années de BTS SIO , je suis passioner par le sport, et les voyages. J'aime l'informatique et j'aimerais poursuivre mes études vers un bachelor 3 informatique.</p>
+        </div>
     </div>
+
+    <!-- Script JavaScript pour gérer le changement de texte -->
+    <script>
+        const switchInput = document.getElementById('switch');
+        const switchText = document.getElementById('switch-text');
+        const thumb = document.getElementById('slider');
+
+        // Écouteur d'événement pour détecter le changement de l'option du switch
+        switchInput.addEventListener('change', function () {
+            if (this.checked) {
+                // Si SLAM est sélectionné, afficher le texte correspondant
+                switchText.textContent = 'SLAM';
+                thumb.style.transform = 'translateX(0)';
+                thumb.style.backgroundColor = '#10B981';
+                content.innerHTML = `
+                    <p class="text-lg text-gray-700">Le SLAM (Solutions Logicielles et Applications Métiers) est l'une des options du BTS SIO. Cette spécialisation forme des professionnels capables de concevoir, développer et maintenir des logiciels et des applications métiers répondant aux besoins des organisations.</p>
+                `;
+            } else {
+                // Si SISR est sélectionné, afficher le texte correspondant
+                switchText.textContent = 'SISR';
+                thumb.style.transform = 'translateX(100%)';
+                thumb.style.backgroundColor = '#10B981';
+                content.innerHTML = `
+                    <p class="text-lg text-gray-700">Le SISR (Solutions d'Infrastructure, Systèmes et Réseaux) est l'une des options du BTS SIO. Cette spécialisation forme des professionnels capables de gérer la gestion, la maintenance et la sécurité des infrastructures informatiques et des réseaux au sein des entreprises.</p>
+                `;
+            }
+        });
+    </script>
 </body>
+
 </html>

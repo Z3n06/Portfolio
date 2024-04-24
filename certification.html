@@ -2,36 +2,53 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/comp.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" type="image/png" href="/image/favicon.png"/>
-
-  <title>Certification</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="/image/favicon.png" />
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<header class="header">
-  <a href="" class="logo">Portfolio</a>
 
-  <nav class="navbar">
-    <a href="/url/cv_ilyes.pdf" target="_blank">Curriculum vitæ</a>
-    <a href="/comp.html">Compétence</a>
-    <a href="/projets.html">Projets</a>
-    <a href="certification.html">Certification</a>
-    <a href="/url/E4.pdf.pdf">Epreuve E4</a>
-   
-    
-  </nav>
-</header>
+<body class="bg-cover bg-center bg-fixed" style="background-image: url('/image/wallpaper.jpg');">
+    <header class="header bg-black-800 text-white py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <a href="index.html" class="logo text-2xl font-bold">Portfolio</a>
+            <nav class="navbar">
+                <a href="/url/cv_ilyes.pdf" target="_blank"
+                    class="text-white font-medium hover:text-gray-300 mr-4">Curriculum vitæ</a>
+                <a href="/comp.html" class="text-white font-medium hover:text-gray-300 mr-4">Compétence</a>
+                <a href="/projets.html" class="text-white font-medium hover:text-gray-300 mr-4">Projets</a>
+                <a href="certification.html" class="text-white font-medium hover:text-gray-300 mr-4">Certification</a>
+                <a href="/url/E4.pdf" class="text-white font-medium hover:text-gray-300">Epreuve E4</a>
+            </nav>
+        </div>
+    </header>
 
-<section class="team">
-    <h2 class="section-heading">Mes Certifications</h2>
-    <div class="container">
-        <div class="profile">
-            <img src="./image/pix.png" alt="" /><span class="name">PIX</span>
+    <div class="container mx-auto py-8 flex justify-center">
+      <!-- Première box -->
+      <div class="bg-white shadow-lg rounded-lg p-8 mx-4 mb-8 mt-8 w-80">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">Certification PIX</h2>
+          <div class="flex justify-center mb-4">
+              <a href="url/attestation-pix-20231219.pdf" target="_blank">
+                  <img src="image/pix.png" alt="Logo Certification 1" class="w-12 h-12 rounded-full">
+              </a>
           </div>
-          <div class="profile">
-            <img src="./image/secnum.png" alt="" /><span class="name">SecnumAcadémie</span>
+          <p class="text-lg text-gray-700">Pix est un service public en ligne français lancé dans le cadre du dispositif des startups d’État proposé par la direction interministérielle du numérique permettant à ses utilisateurs d'évaluer, de développer et de certifier leurs compétences numériques.</p>
+      </div>
+  
+      <!-- Deuxième box -->
+      <div class="bg-white shadow-lg rounded-lg p-8 mx-4 mb-8 mt-8 w-80">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">Certification SecNum</h2>
+          <div class="flex justify-center mb-4">
+              <a href="url/secnum.pdf" target="_blank">
+                  <img src="image/secnum.png" alt="Logo Certification 2" class="w-12 h-12 rounded-full">
+              </a>
           </div>
+          <p class="text-lg text-gray-700">Ensemble des informations pour vous initier à la cybersécurité, approfondir vos connaissances, et ainsi agir efficacement sur la protection de vos outils numériques. Ce dispositif est accessible gratuitement. Le suivi intégral de ce dispositif vous fera bénéficier d’une attestation de réussite.</p>
+      </div>
+  </div>
+  
+  
+</body>

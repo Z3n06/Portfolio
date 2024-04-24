@@ -3,12 +3,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins';
+  
 }
 
 body {
-  background-image: url('/image/liquid.jpg');
-  background-repeat: no-repeat;
-  background-color: #f0f0f0;
+  background-image: url('/image/wallpaper.jpg');
   margin: 0;
   padding: 0;
   display: flex;
