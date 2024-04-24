@@ -9,6 +9,15 @@
     <link rel="shortcut icon" type="image/png" href="/image/favicon.png" />
     <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .zoom-box {
+            transition: transform 0.3s;
+        }
+
+        .zoom-box:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 
 <body class="bg-cover bg-center bg-fixed" style="background-image: url('/image/wallpaper.jpg');">
@@ -27,28 +36,29 @@
     </header>
 
     <div class="container mx-auto py-8 flex justify-center">
-      <!-- Première box -->
-      <div class="bg-white shadow-lg rounded-lg p-8 mx-4 mb-8 mt-8 w-80">
-          <h2 class="text-2xl font-bold text-gray-800 mb-4">Certification PIX</h2>
-          <div class="flex justify-center mb-4">
-              <a href="url/attestation-pix-20231219.pdf" target="_blank">
-                  <img src="image/pix.png" alt="Logo Certification 1" class="w-12 h-12 rounded-full">
-              </a>
-          </div>
-          <p class="text-lg text-gray-700">Pix est un service public en ligne français lancé dans le cadre du dispositif des startups d’État proposé par la direction interministérielle du numérique permettant à ses utilisateurs d'évaluer, de développer et de certifier leurs compétences numériques.</p>
-      </div>
-  
-      <!-- Deuxième box -->
-      <div class="bg-white shadow-lg rounded-lg p-8 mx-4 mb-8 mt-8 w-80">
-          <h2 class="text-2xl font-bold text-gray-800 mb-4">Certification SecNum</h2>
-          <div class="flex justify-center mb-4">
-              <a href="url/secnum.pdf" target="_blank">
-                  <img src="image/secnum.png" alt="Logo Certification 2" class="w-12 h-12 rounded-full">
-              </a>
-          </div>
-          <p class="text-lg text-gray-700">Ensemble des informations pour vous initier à la cybersécurité, approfondir vos connaissances, et ainsi agir efficacement sur la protection de vos outils numériques. Ce dispositif est accessible gratuitement. Le suivi intégral de ce dispositif vous fera bénéficier d’une attestation de réussite.</p>
-      </div>
-  </div>
-  
-  
+        <!-- Première box -->
+        <div class="bg-white shadow-lg rounded-lg p-8 mx-4 mb-8 mt-8 w-80 zoom-box">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Certification PIX</h2>
+            <div class="flex justify-center mb-4">
+                <a href="url/attestation-pix-20231219.pdf" target="_blank">
+                    <img src="image/pix.png" alt="Logo Certification 1" class="w-12 h-12 rounded-full">
+                </a>
+            </div>
+            <p class="text-lg text-gray-700">Pix est un service public en ligne français lancé dans le cadre du dispositif des startups d’État proposé par la direction interministérielle du numérique permettant à ses utilisateurs d'évaluer, de développer et de certifier leurs compétences numériques.</p>
+        </div>
+
+        <!-- Deuxième box -->
+        <div class="bg-white shadow-lg rounded-lg p-8 mx-4 mb-8 mt-8 w-80 zoom-box">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Certification SecNum</h2>
+            <div class="flex justify-center mb-4">
+                <a href="url/secnum.pdf" target="_blank">
+                    <img src="image/secnum.png" alt="Logo Certification 2" class="w-12 h-12 rounded-full">
+                </a>
+            </div>
+            <p class="text-lg text-gray-700">Ensemble des informations pour vous initier à la cybersécurité, approfondir vos connaissances, et ainsi agir efficacement sur la protection de vos outils numériques. Ce dispositif est accessible gratuitement. Le suivi intégral de ce dispositif vous fera bénéficier d’une attestation de réussite.</p>
+        </div>
+    </div>
+
 </body>
+
+</html>

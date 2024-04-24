@@ -9,6 +9,7 @@
     <link rel="shortcut icon" type="image/png" href="/image/favicon.png" />
     <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
 </head>
 
 <body class="bg-cover bg-center bg-fixed" style="background-image: url('/image/wallpaper.jpg');">
@@ -57,34 +58,21 @@
             <p class="text-lg text-gray-700">Je suis Taoufik Ilyes, j'ai 21 ans je suis étudiant en deuxieme années de BTS SIO , je suis passioner par le sport, et les voyages. J'aime l'informatique et j'aimerais poursuivre mes études vers un bachelor 3 informatique.</p>
         </div>
     </div>
-
-    <!-- Script JavaScript pour gérer le changement de texte -->
-    <script>
-        const switchInput = document.getElementById('switch');
-        const switchText = document.getElementById('switch-text');
-        const thumb = document.getElementById('slider');
-
-        // Écouteur d'événement pour détecter le changement de l'option du switch
-        switchInput.addEventListener('change', function () {
-            if (this.checked) {
-                // Si SLAM est sélectionné, afficher le texte correspondant
-                switchText.textContent = 'SLAM';
-                thumb.style.transform = 'translateX(0)';
-                thumb.style.backgroundColor = '#10B981';
-                content.innerHTML = `
-                    <p class="text-lg text-gray-700">Le SLAM (Solutions Logicielles et Applications Métiers) est l'une des options du BTS SIO. Cette spécialisation forme des professionnels capables de concevoir, développer et maintenir des logiciels et des applications métiers répondant aux besoins des organisations.</p>
-                `;
-            } else {
-                // Si SISR est sélectionné, afficher le texte correspondant
-                switchText.textContent = 'SISR';
-                thumb.style.transform = 'translateX(100%)';
-                thumb.style.backgroundColor = '#10B981';
-                content.innerHTML = `
-                    <p class="text-lg text-gray-700">Le SISR (Solutions d'Infrastructure, Systèmes et Réseaux) est l'une des options du BTS SIO. Cette spécialisation forme des professionnels capables de gérer la gestion, la maintenance et la sécurité des infrastructures informatiques et des réseaux au sein des entreprises.</p>
-                `;
-            }
-        });
-    </script>
-</body>
-
-</html>
+    <style>
+        /* Ajout de styles pour positionner le footer en bas de la page */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+    <!-- Footer -->
+    <footer>
+        <p>© TAOUFIK ILYES</p>
+        <p>Perpignan (66000), France</p>
+    </footer>

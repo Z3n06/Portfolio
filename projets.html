@@ -10,6 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="/image/favicon.png" />
     <title>Projets</title>
+    <style>
+        .project-box {
+            transition: transform 0.3s;
+        }
+
+        .project-box:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 
 <body class="bg-cover bg-center bg-fixed" style="background-image: url('/image/wallpaper.jpg');">
@@ -34,25 +43,47 @@
 
     <!-- Trois boîtes centrées avec des images et un titre -->
     <div class="container mx-auto mt-8 flex justify-center">
-        <div class="w-64 mx-4 border border-white rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:bg-white hover:text-black">
+        <a href="https://www.example.com" class="w-64 mx-4 border border-white rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:bg-white hover:text-black project-box">
             <img src="/image/ecommerce.jpg" alt="Projet 1" class="w-full h-48 object-cover">
             <div class="p-4">
                 <h2 class="text-xl font-semibold text-white">Site de E-commerce</h2>
             </div>
-        </div>
-        <div class="w-64 mx-4 border border-white rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:bg-white hover:text-black">
+        </a>
+        <a href="https://github.com/qnoqno/SpaceInvaders-GODOT" class="w-64 mx-4 border border-white rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:bg-white hover:text-black project-box">
             <img src="/image/spaceinvaders.jpg" alt="Projet 2" class="w-full h-48 object-cover">
             <div class="p-4">
                 <h2 class="text-xl font-semibold text-white">Jeux SpaceInvaders</h2>
             </div>
-        </div>
-        <div class="w-64 mx-4 border border-white rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:bg-white hover:text-black">
-            <img src="/image/IA.png" alt="Projet 3" class="w-full h-48 object-cover">
+        </a>
+        <a href="https://github.com/Z3n06/Calculatrice" class="w-64 mx-4 border border-white rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:bg-white hover:text-black project-box">
+            <img src="/image/cal.jpg" alt="Projet 3" class="w-full h-48 object-cover">
             <div class="p-4">
-                <h2 class="text-xl font-semibold text-white">L'IA</h2>
+                <h2 class="text-xl font-semibold text-white">Calculatrice</h2>
             </div>
+        </a>
+    </div>
+
+    <!-- Nouvelle section "Veilles" -->
+    <div class="container mx-auto mt-8 text-center">
+        <h2 class="text-3xl font-bold text-white mb-4">Veilles</h2>
+        <div class="flex justify-center">
+            <!-- Première boîte de veille -->
+            <a href="https://www.accenture.com/fr-fr/insights/artificial-intelligence-summary-index" class="w-64 mx-4 border border-white rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:bg-white hover:text-black project-box">
+                <img src="/image/IA.png" alt="Veille 1" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-xl font-semibold text-white">Qu’est-ce que l’intelligence artificielle ?</h2>
+                </div>
+            </a>
+            <!-- Deuxième boîte de veille -->
+            <a href="https://www.1jour1actu.com/technologies/safer-internet-day-comment-utiliser-internet-sans-danger" class="w-64 mx-4 border border-white rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:bg-white hover:text-black project-box">
+                <img src="/image/DARK.jpg" alt="Veille 2" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-xl font-semibold text-white">Les risques d'internet</h2>
+                </div>
+            </a>
         </div>
     </div>
+
 </body>
 
 </html>
