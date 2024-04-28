@@ -9,7 +9,40 @@
     <link rel="shortcut icon" type="image/png" href="/image/favicon.png" />
     <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    
+
+    <style>
+        /* Ajout de styles pour positionner le footer en bas de la page */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* Styles pour le slider */
+        #slider {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Styles pour le bouton du slider */
+        #slider::before {
+            content: '';
+            width: 16px;
+            height: 16px;
+            background-color: #fff;
+            border-radius: 50%;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        /* Styles pour le texte du switch */
+        #switch-text {
+            transition: color 0.3s ease-in-out;
+        }
+    </style>
 </head>
 
 <body class="bg-cover bg-center bg-fixed" style="background-image: url('/image/wallpaper.jpg');">
@@ -17,8 +50,7 @@
         <div class="container mx-auto flex justify-between items-center px-4">
             <a href="index.html" class="logo text-2xl font-bold">Portfolio</a>
             <nav class="navbar">
-                <a href="/url/cv_ilyes.pdf" target="_blank"
-                    class="text-white font-medium hover:text-gray-300 mr-4">Curriculum vitæ</a>
+                <a href="/url/cv_ilyes.pdf" target="_blank" class="text-white font-medium hover:text-gray-300 mr-4">Curriculum vitæ</a>
                 <a href="/comp.html" class="text-white font-medium hover:text-gray-300 mr-4">Compétence</a>
                 <a href="/projets.html" class="text-white font-medium hover:text-gray-300 mr-4">Projets</a>
                 <a href="certification.html" class="text-white font-medium hover:text-gray-300 mr-4">Certification</a>
@@ -39,11 +71,13 @@
             <h2 class="text-3xl font-bold text-gray-800 mb-4">BTS SIO</h2>
             <div class="flex items-center mb-4">
                 <!-- Bouton switch pour choisir entre SLAM et SISR -->
-                <input type="checkbox" id="switch" class="hidden">
+                <input type="checkbox" id="switch" class="hidden opacity-0 absolute">
+
                 <label for="switch" class="relative flex items-center cursor-pointer mr-4">
                     <span class="block w-10 h-6 bg-gray-400 rounded-full"></span>
                     <span id="slider" class="absolute top-0 left-0 w-6 h-6 bg-green-500 rounded-full shadow-md transition transform translate-x-0"></span>
                 </label>
+                
                 <span id="switch-text" class="text-lg font-bold text-gray-700">SLAM</span>
             </div>
             <!-- Contenu à afficher en fonction de l'option choisie -->
@@ -58,21 +92,46 @@
             <p class="text-lg text-gray-700">Je suis Taoufik Ilyes, j'ai 21 ans je suis étudiant en deuxieme années de BTS SIO , je suis passioner par le sport, et les voyages. J'aime l'informatique et j'aimerais poursuivre mes études vers un bachelor 3 informatique.</p>
         </div>
     </div>
-    <style>
-        /* Ajout de styles pour positionner le footer en bas de la page */
-        footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-    </style>
+
+    <!-- Ajout du script JavaScript pour le bouton switch -->
+    <script>
+        // Récupération des éléments du DOM
+        const switchInput = document.getElementById('switch');
+        const slider = document.getElementById('slider');
+        const switchText = document.getElementById('switch-text');
+        const content = document.getElementById('content');
+
+        // Ajout d'un écouteur d'événement pour détecter le changement d'état du bouton switch
+        switchInput.addEventListener('change', function() {
+            // Si le bouton est coché
+            if (this.checked) {
+                // Déplace le slider vers la droite
+                slider.style.transform = 'translate-x-full';
+                // Met à jour le texte du switch
+                switchText.textContent = 'SISR';
+                // Met à jour la couleur du bouton
+                slider.style.backgroundColor = '#6B7280';
+                // Met à jour le contenu en fonction de l'option choisie
+                content.innerHTML = '<p class="text-lg text-gray-700">Le SISR (Solutions d\'Infrastructure, Systèmes et Réseaux) est l\'une des options du BTS SIO. Cette spécialisation forme des professionnels capables de gérer l\'infrastructure, les systèmes et les réseaux informatiques d\'une organisation.</p>';
+            } else {
+                // Déplace le slider vers la gauche
+                slider.style.transform = 'translate-x-0';
+                // Met à jour le texte du switch
+                switchText.textContent = 'SLAM';
+                // Met à jour la couleur du bouton
+                slider.style.backgroundColor = '#22C55E';
+                // Met à jour le contenu en fonction de l'option choisie
+                content.innerHTML = '<p class="text-lg text-gray-700">Le SLAM (Solutions Logicielles et Applications Métiers) est l\'une des options du BTS SIO. Cette spécialisation forme des professionnels capables de concevoir, développer et maintenir des logiciels et des applications métiers répondant aux besoins des organisations.</p>';
+            }
+        });
+    </script>
+
     <!-- Footer -->
     <footer>
         <p>© TAOUFIK ILYES</p>
         <p>Perpignan (66000), France</p>
     </footer>
+
+</body>
+
+</html>
